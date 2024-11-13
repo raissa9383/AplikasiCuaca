@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bantuan</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="main-content">
+            {{>header}}
+            <div class="FAQ">
+    <h2>🤔 Frequently Asked Questions 🤔</h2>
+
+    <div class="faq-item">
+        <h4>Halaman ini digunakan untuk apa?</h4>
+        <p>Halaman ini berfungsi sebagai pusat bantuan dan informasi terkait aplikasi ini.
+            Weather Checker adalah aplikasi pengecek cuaca yang dibangung dengan menggunakan 
+            javascript, html, dan css. Anda dapat memasukan nama kota pada kotak input di halaman Home
+            kemudian informasi cuaca kota tersebut akan muncul!
+        </p>
+        <img class="SShome" src="/img/sshome.png">
+    </div>
+
+    <div class="faq-item">
+        <h4>Apa itu API?</h4>
+        <p>API adalah singkatan dari Application Programming Interface. 
+            API adalah sekumpulan aturan dan protokol yang memungkinkan 
+            satu aplikasi berkomunikasi atau berinteraksi dengan aplikasi 
+            lain. Dalam dunia perangkat lunak, API adalah "jembatan" yang 
+            memungkinkan dua sistem atau aplikasi bertukar data dan 
+            menjalankan fungsi tertentu tanpa harus memahami detail 
+            internal masing-masing.
+            </p>
+    </div>
+
+    <div class="faq-item">
+    <h4>API apa yang digunakan dalam aplikasi ini?</h4>
+    <p>API yang digunakan adalah:</p>
+    <ul class="api-list">
+        <li>
+            <strong>Weatherstack:</strong> Weatherstack adalah API yang menyediakan data cuaca secara real-time dan historis. API ini memungkinkan aplikasi untuk mengakses berbagai informasi cuaca, seperti suhu, UV index, visibilitas, dan kondisi cuaca lainnya, di berbagai lokasi di seluruh dunia. Fungsinya adalah memberikan informasi prakiraan cuaca yang dapat membantu pengguna dalam perencanaan aktivitas, perjalanan, atau keputusan yang bergantung pada kondisi cuaca.
+        </li>
+        <li>
+            <strong>Positionstack:</strong> Positionstack adalah API geolokasi yang digunakan untuk melakukan pencarian lokasi, baik dari nama lokasi (forward geocoding) atau koordinat GPS (reverse geocoding). Dengan Positionstack, aplikasi bisa menentukan lokasi geografis pengguna atau tempat tertentu berdasarkan alamat atau nama tempat yang diinput. Fungsinya adalah mempermudah pencarian lokasi atau pemosisian yang akurat dalam aplikasi, sehingga pengguna bisa mendapatkan data yang relevan berdasarkan lokasi mereka.
+        </li>
+        <li>
+            <strong>Mediastack:</strong> Mediastack adalah API yang menyediakan akses ke berita dan konten media dari berbagai sumber di seluruh dunia. API ini memungkinkan aplikasi untuk mengambil berita terbaru atau artikel tertentu yang diinginkan, berdasarkan kategori, lokasi, atau kata kunci tertentu. Fungsinya adalah menyediakan konten berita atau informasi terbaru untuk pengguna, sehingga aplikasi dapat memberikan pembaruan informasi yang relevan secara real-time.
+        </li>
+    </ul>
+</div>
+
+
+    <div class="faq-item">
+        <h4>Apa itu RESTful API?</h4>
+        <p>RESTful API adalah jenis API yang menggunakan prinsip 
+            Representational State Transfer (REST) untuk 
+            memungkinkan komunikasi antara klien dan server. 
+            RESTful API mengandalkan protokol HTTP dan menggunakan 
+            metode standar seperti GET, POST, PUT, dan DELETE untuk 
+            mengakses dan memanipulasi data di server. Dalam desain 
+            RESTful, setiap sumber daya, seperti data pengguna atau 
+            produk, diwakili oleh URL unik, dan data biasanya dikirim 
+            dalam format yang mudah dibaca, seperti JSON atau XML. 
+            API ini dirancang agar ringan, cepat, dan dapat diskalakan, 
+            sehingga banyak digunakan dalam aplikasi web dan layanan 
+            cloud. RESTful API juga tidak menyimpan status (stateless), 
+            artinya setiap permintaan dari klien harus memuat semua 
+            informasi yang diperlukan, tanpa mengandalkan data dari 
+            permintaan sebelumnya. Keuntungan dari RESTful API adalah 
+            kemudahan integrasi, pemeliharaan yang sederhana, dan 
+            kemampuannya untuk digunakan oleh berbagai platform dan 
+            perangkat.</p>
+
+        <img class="rest" src="/img/rest-api.png">
+    </div>
+</div>
+        
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>

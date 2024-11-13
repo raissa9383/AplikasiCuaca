@@ -1,0 +1,397 @@
+/* Global Styles */
+body {
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #75abe9;
+    font-size: 48px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #444444;
+}
+
+h4 {
+    font-size: 18px;
+    color: #373636;
+    margin-top: 24px;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Menambahkan jarak antar link di navbar */
+header a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: #75abe9;
+    margin-right: 20px; /* Menambahkan jarak antar link */
+}
+
+/* Menghapus margin pada link terakhir di navbar */
+header a:last-child {
+    margin-right: 0; /* Tidak ada margin setelah link terakhir */
+}
+
+header a:hover {
+    color: #2b6cb0;
+}
+
+
+footer {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+button {
+    background: #75abe9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+input {
+    border: 2px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    font-size: 16px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Weather Icon CSS */
+.weather-info {
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 24px; 
+}
+
+.weather-info h2 {
+    margin-top: 0;
+    color: #2b6cb0;
+}
+
+.weather-info p {
+    margin: 16px 0;
+}
+
+/* Menyelaraskan ikon cuaca */
+.weather-icon img {
+    width: 100px !important; 
+    height: 100px !important; 
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Warna ikon cuaca berdasarkan kondisi */
+.weather-icon.sunny {
+    color: #f7dc7e;
+}
+
+.weather-icon.cloudy {
+    color: #b0c4de;
+}
+
+.weather-icon.rainy {
+    color: #81cafb;
+}
+
+.weather-icon.misty {
+    font-size: 3em;
+    color: #95a5a6;
+}
+
+.weather-icon.unknown {
+    color: #e74c3c;
+}
+
+/* Font Awesome Icon colors */
+.temp-icon {
+    color: #ed8771; /* Warna oranye untuk ikon suhu */
+}
+
+.uv-icon {
+    color: #f79dca; /* Warna pink untuk ikon UV */
+}
+
+.visibility-icon {
+    color: #5dade2; /* Warna biru untuk ikon visibilitas */
+}
+
+/* Background with blur effect */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/img/background.jpg') no-repeat center center/cover;
+    filter: blur(6px);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+/* Menyelaraskan header dan footer */
+header, footer {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.747) 0%, rgba(255, 255, 255, 0.747) 100%);
+}
+
+/* Optimalisasi blur background */
+.background {
+    filter: blur(6px);
+    opacity: 0.9;
+}
+
+.data-diri {
+    background: linear-gradient(135deg, rgba(175, 212, 254, 0.747), rgba(255, 255, 255, 0.747)); /* Transparan */
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.data-diri img.portrait {
+    width: 200px;
+    margin: 20px auto;
+    display:block;
+    border-radius: 20%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.data-diri img.portrait:hover {
+    transform: scale(1.2) rotate(10deg); 
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.555); 
+}
+
+.data-diri p {
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.data-diri p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar logo */
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(175, 212, 254, 0.747), rgba(255, 255, 255, 0.747)); /* Transparan */
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-logo {
+    width: 70px; /* Sesuaikan ukuran */
+    height: auto; 
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(100%); /* Efek grayscale awal */
+}
+
+.project-logo:hover {
+    transform: scale(1.1); /* Zoom in saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    filter: grayscale(0%); /* Kembalikan warna penuh saat hover */
+}
+
+.project-logo-tableau {
+    width: 70px; 
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.project-logo-tableau:hover {
+    transform: scale(1.15); 
+    filter: grayscale(0%);
+}
+
+.FAQ {
+    background-color: rgba(255, 255, 255, 0.748);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.FAQ h2 {
+    text-align: center;
+    color: #75abe9;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: rgba(240, 248, 255, 0.745); /* Warna latar belakang setiap item */
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item h4 {
+    font-size: 20px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 5px 0 0 0;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); /* Animasi saat hover */
+    background-color: #e6f7ff; /* Warna lebih cerah saat hover */
+}
+
+.faq-item h4:hover {
+    color: #75abe9;
+}
+
+.faq-item img.SShome {
+    max-width: 100%; 
+    width: 400px; 
+    display: block; 
+    margin: 16px auto; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.faq-item img.SShome:hover {
+    transform: scale(1.5); /* Zoom in saat hover untuk efek interaktif */
+}
+
+.api-list {
+    margin: 10px 0 0 20px; 
+    padding-left: 20px; 
+    list-style-type: disc; 
+}
+
+.api-list li {
+    margin-bottom: 10px; 
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.api-list li strong {
+    color: #333333; 
+    font-weight: bold;
+}
+
+.faq-item img.rest {
+    max-width: 100%; 
+    width: 400px; 
+    display: block; 
+    margin: 16px auto; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.faq-item img.rest:hover {
+    transform: scale(1.8); 
+}
+
+/* Styling untuk div dengan class 'berita' */
+.berita {
+    background-color:  rgba(240, 248, 255, 0.745);
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px; 
+}
+
+.berita ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 5px;
+}
+
+.berita ul li {
+    background-color: #d9e6f5; 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.berita ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.berita h2 {
+    font-size: 24px; 
+    color: #2b6cb0; 
+    margin-bottom: 8px; 
+    font-weight: bold;
+}
+
+.berita p {
+    font-size: 16px; 
+    color: #555555; 
+    line-height: 1.6; 
+    margin-bottom: 12px; 
+}
+
+.berita a {
+    color: #4a90e2; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+}
+
+.berita a:hover {
+    background-color: #357ab8; 
+    color: white; 
+}

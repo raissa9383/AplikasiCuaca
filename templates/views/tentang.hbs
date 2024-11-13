@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tentang</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/img/weather.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="main-content">
+            {{>header}}
+
+            <div class="data-diri">
+                <img class="portrait" src="/img/foto_diri.png">
+                <p>Halo semua perkenalkan nama saya Puti Raissa Razani</p>
+                <p>Saat ini saya tengah berkuliah di Universitas Negeri Padang dan sedang menjalani semester 5 <br>
+                    Saya bercita-cita untuk bekerja di luar negri sebagai data scientist!
+                </p>
+            </div>
+
+            <div class="projects">
+                <h4>Check out my projects!</h4>
+                <a href="https://github.com/raissa9383" target="_blank">
+                <img src="/img/github-mark.png" alt="GitHub" class="project-logo">
+                </a>
+                <a href="https://www.figma.com/files/team/1274394587514987305/all-projects?fuid=1274394585209304461" target="_blank">
+                <img src="/img/figma-logo.png" alt="Figma" class="project-logo">
+                </a>
+                <a href="https://public.tableau.com/app/profile/puti.raissa.razani/vizzes" target="_blank">
+                <img src="/img/tableau-logo.png" alt="Tableau" class="project-logo-tableau">
+                </a>
+            </div>
+
+
+            </div>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>
